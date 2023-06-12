@@ -9,17 +9,16 @@
 npm grupo-cometa-orchestrator-logs
 
 ```
+## 🔨 How to Usage
 
 - Create an .env file with the following variables. LOGS_FOLDER is optional default value is a storage folder within the current directory for local logs
 
-## Environment Variables
+### Environment Variables
 
 ```
 PUBLIC_ID=
 LOGS_FOLDER=
 ```
-
-## 🔨 How to Usage
 
 To use the library, follow the example:
 
