@@ -27,8 +27,8 @@ LOGS_FOLDER=
 const { Log } = require("grupo-cometa-orchestrator-logs");
 
 const message = 'Log message';
-const log = new Log(message, 'INFO');
-log.save()
+
+Log.send(message, 'INFO');
 
 //Logs types includes INFO, WARNING, ERROR, CRITICAL
 
