@@ -6,7 +6,7 @@
 
 ```bash
 
-npm grupo-cometa-orchestrator-logs
+npm install grupo-cometa-orchestrator-logs
 
 ```
 ## 🔨 How to Usage
