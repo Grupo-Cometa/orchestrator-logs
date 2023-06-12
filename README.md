@@ -18,6 +18,8 @@ npm grupo-cometa-orchestrator-logs
 ```
 PUBLIC_ID=
 LOGS_FOLDER=
+AMQP_URL=
+WS_URL=
 ```
 
 #### To use the library, follow the example:

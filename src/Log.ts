@@ -59,7 +59,7 @@ export class Log {
         try {
             const message = JSON.stringify(logData);
             const queue = 'robots.executions-logs' 
-            const connection = await connect('amqp://rpa-orchestrator:cometa!10@localhost:5672');
+            const connection = await connect(process.env.AMQP_URL!);
             const channel = await connection.createChannel();
             channel.assertQueue(queue, {
                 durable: true,
@@ -86,7 +86,7 @@ export class Log {
                 data: logData
             }
     
-            const socket = new WebSocket('ws://192.168.201.239:8443/');
+            const socket = new WebSocket(process.env.WS_URL!);
     
             socket.onopen = () => {
                 socket.send(JSON.stringify(message));
