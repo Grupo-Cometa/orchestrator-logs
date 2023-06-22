@@ -11,15 +11,8 @@ interface LogData {
     public_id: string
 }
 export class Log {
-
-    private static LogType = {
-        INFO: 'INFO',
-        WARNING: 'WARNING',
-        ERROR: 'ERROR',
-        CRITICAL: 'CRITICAL'
-    }
-
-    static async send(message: string, logType: keyof typeof Log.LogType): Promise<void> 
+    
+    static async send(message: string, logType: 'INFO' | 'WARNING' | 'ERROR' | 'CRITICAL'): Promise<void> 
     {
         if(process.env.DEBUG == 'true') return;
 
